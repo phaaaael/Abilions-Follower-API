@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abilions Follower</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-cross"></i>
+                <h1>Abilions Follower</h1>
+            </div>
+            <button class="favorites-btn" id="favoritesBtn">
+                <i class="fas fa-heart"></i>
+                <span class="favorites-count" id="favoritesCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2 class="hero-title">Explore a Palavra de Deus</h2>
+                <p class="hero-subtitle">Descubra versículos inspiradores e fortaleça sua fé através das Sagradas Escrituras</p>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Buscar versículos... (ex: João 3:16, Salmos 23)" />
+                        <button class="search-btn" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                            Buscar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <button class="action-btn" id="randomVerseBtn">
+                        <i class="fas fa-dice"></i>
+                        Versículo Aleatório
+                    </button>
+                    <button class="action-btn" id="verseOfDayBtn">
+                        <i class="fas fa-calendar-day"></i>
+                        Versículo do Dia
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="verses-section" id="versesSection">
+            <div class="container">
+                <h3 class="section-title" id="sectionTitle">Versículos Populares</h3>
+                
+                <div class="verses-loading" id="versesLoading">
+                    <div class="loading-spinner"></div>
+                    <p>Carregando versículos...</p>
+                </div>
+
+                <div class="verses-grid" id="versesGrid"></div>
+                
+                <button class="load-more-btn" id="loadMoreBtn">
+                    <i class="fas fa-plus"></i>
+                    Carregar Mais
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Favoritos -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Meus Versículos Favoritos</h3>
+                <button class="close-btn" id="closeModalBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="favorites-grid" id="favoritesGrid"></div>
+                <div class="empty-favorites" id="emptyFavorites">
+                    <i class="fas fa-heart-broken"></i>
+                    <p>Você ainda não tem versículos favoritos.</p>
+                    <p>Clique no coração dos versículos para salvá-los aqui!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Abilions Follower. Versículos fornecidos por bible-api.com.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
